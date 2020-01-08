@@ -13,12 +13,6 @@ html {
 }
 
 body {
-   margin: 0px;
-   min-height: 100%;
-   width: 100%;
-}
-
-body {
   color: #333;
   padding: 20px;
   text-align: center;
@@ -26,6 +20,11 @@ body {
   justify-content: space-between;
   margin: 0;
   height: 100%;
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .separator {
@@ -51,17 +50,17 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateX(-15deg) rotateY(15deg);
-  top: 30%;
+  //top: 20%;
 }
 
 ._3dface {
-    overflow: hidden;
-    position: absolute;
+  overflow: hidden;
+  position: absolute;
 
-    border: 1px solid #888;
-    background: #FFF;
-    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1),
- 0 0 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid #888;
+  background: #FFF;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1),
+    0 0 50px rgba(0, 0, 0, 0.3);
   color: #333;
   line-height: $cubeWidth;
   opacity: 0.8;
@@ -83,11 +82,11 @@ body {
 ._3dface--bottom {
   width: $cubeWidth;
   height: $cubeDepth;
-    transform: rotateX(-90deg) translate3d(0, 0, $cubeHeight / 2);
+  transform: rotateX(-90deg) translate3d(0, 0, $cubeHeight / 2);
 }
 
 ._3dface--left {
-    width: $cubeDepth;
+  width: $cubeDepth;
   height: $cubeHeight;
   left: 50%;
   margin-left: -$cubeDepth / 2;
@@ -107,7 +106,7 @@ body {
 ._3dface--back {
   width: $cubeWidth;
   height: $cubeHeight;
-    transform: rotateY(180deg) translate3d(0, 0, $cubeDepth / 2);
+  transform: rotateY(180deg) translate3d(0, 0, $cubeDepth / 2);
 }
 
 #radio-left:checked ~ .space3d ._3dbox {
