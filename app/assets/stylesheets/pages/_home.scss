@@ -13,6 +13,9 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-columns: [first] auto [line2] auto [line3] 450px [col4-start] auto [five] auto [end];
+  grid-template-rows: [row1-start] auto [row1-end] 450px [third-line] auto [last-line];
   color: #333;
   padding: 20px;
   text-align: center;
@@ -23,9 +26,35 @@ body {
   margin: 0px;
   min-height: 100%;
   width: 100%;
-  display: flex;
+  //display: flex;
   align-items: center;
   background: #e67e22;
+}
+
+#radio-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#radio-right {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#radio-bottom {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#radio-top {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+#radio-back {
+  grid-column: 3;
+  grid-row: 3;
+  justify-self: center;
 }
 
 .separator {
@@ -34,6 +63,8 @@ body {
 
 /* 3D Cube */
 .space3d {
+    grid-column: 3;
+    grid-row: 2;
     perspective: 1000px;
     width: $cubeWidth;
     height: $cubeHeight;
